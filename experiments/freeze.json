@@ -1,0 +1,33 @@
+{
+  "protocol": "light-agents-swarm-ablation-1",
+  "date": "2026-11-13",
+  "numpy": "1.26.4",
+  "search_seed": 20261113,
+  "society_seed": 20261115,
+  "train_seed": 20261111,
+  "init_seed": 20261107,
+  "adam_seed": 20261109,
+  "bootstrap_seed": 0,
+  "bootstrap_resamples": 10000,
+  "n_depth2": 48,
+  "n_depth1": 24,
+  "n_society": 24,
+  "train_n": 1600,
+  "epochs": 6,
+  "lr": 0.01,
+  "width": 384,
+  "beam": 6,
+  "budget": 48,
+  "curiosity_on": 1.5,
+  "bounty": 1000000,
+  "stake": 100000,
+  "label_shift": 1,
+  "primary_contrasts": [
+    "depth2_learned_minus_untrained",
+    "depth2_learned_minus_shuffled",
+    "depth2_curiosity_on_minus_off",
+    "society_minus_single_curious"
+  ],
+  "clear_rule": "95% paired-bootstrap CI lower bound strictly greater than 0",
+  "notes": "One scored run. No retune after this file and the frozen task draws are committed."
+}

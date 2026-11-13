@@ -1,0 +1,2826 @@
+{
+  "protocol": "light-agents-upbringing-1",
+  "freeze_commit": "c703d7629ec512440b5a16888bf01bb819cb9862",
+  "params_per_subject": 326800,
+  "subject_count": 5,
+  "total_subject_params": 1634000,
+  "generalist_params": 326800,
+  "train_rows": {
+    "geo": 1600,
+    "colour": 1600,
+    "object": 1600,
+    "mixed": 1600,
+    "noisy": 200
+  },
+  "generalist_rows": 8000,
+  "train_dropped": {
+    "geo": 0,
+    "colour": 1,
+    "object": 0,
+    "mixed": 0,
+    "noisy": 0
+  },
+  "generalist_dropped": 0,
+  "matrix": {
+    "geo": {
+      "geo": {
+        "solved": 16,
+        "n": 16
+      },
+      "colour": {
+        "solved": 0,
+        "n": 16
+      },
+      "object": {
+        "solved": 0,
+        "n": 16
+      },
+      "cross": {
+        "solved": 0,
+        "n": 16
+      }
+    },
+    "colour": {
+      "geo": {
+        "solved": 9,
+        "n": 16
+      },
+      "colour": {
+        "solved": 16,
+        "n": 16
+      },
+      "object": {
+        "solved": 5,
+        "n": 16
+      },
+      "cross": {
+        "solved": 2,
+        "n": 16
+      }
+    },
+    "object": {
+      "geo": {
+        "solved": 0,
+        "n": 16
+      },
+      "colour": {
+        "solved": 0,
+        "n": 16
+      },
+      "object": {
+        "solved": 16,
+        "n": 16
+      },
+      "cross": {
+        "solved": 0,
+        "n": 16
+      }
+    },
+    "mixed": {
+      "geo": {
+        "solved": 16,
+        "n": 16
+      },
+      "colour": {
+        "solved": 16,
+        "n": 16
+      },
+      "object": {
+        "solved": 16,
+        "n": 16
+      },
+      "cross": {
+        "solved": 12,
+        "n": 16
+      }
+    },
+    "noisy": {
+      "geo": {
+        "solved": 15,
+        "n": 16
+      },
+      "colour": {
+        "solved": 16,
+        "n": 16
+      },
+      "object": {
+        "solved": 12,
+        "n": 16
+      },
+      "cross": {
+        "solved": 5,
+        "n": 16
+      }
+    }
+  },
+  "contrasts": [
+    {
+      "name": "geo_tasks_geo_minus_colour",
+      "left": "geo",
+      "right": "colour",
+      "n": 16,
+      "left_solved": 16,
+      "right_solved": 9,
+      "diff_pp": 43.75,
+      "ci_low_pp": 18.75,
+      "ci_high_pp": 68.75,
+      "clears": true,
+      "left_only": 7,
+      "right_only": 0
+    },
+    {
+      "name": "geo_tasks_geo_minus_object",
+      "left": "geo",
+      "right": "object",
+      "n": 16,
+      "left_solved": 16,
+      "right_solved": 0,
+      "diff_pp": 100.0,
+      "ci_low_pp": 100.0,
+      "ci_high_pp": 100.0,
+      "clears": true,
+      "left_only": 16,
+      "right_only": 0
+    },
+    {
+      "name": "colour_tasks_colour_minus_geo",
+      "left": "colour",
+      "right": "geo",
+      "n": 16,
+      "left_solved": 16,
+      "right_solved": 0,
+      "diff_pp": 100.0,
+      "ci_low_pp": 100.0,
+      "ci_high_pp": 100.0,
+      "clears": true,
+      "left_only": 16,
+      "right_only": 0
+    },
+    {
+      "name": "colour_tasks_colour_minus_object",
+      "left": "colour",
+      "right": "object",
+      "n": 16,
+      "left_solved": 16,
+      "right_solved": 0,
+      "diff_pp": 100.0,
+      "ci_low_pp": 100.0,
+      "ci_high_pp": 100.0,
+      "clears": true,
+      "left_only": 16,
+      "right_only": 0
+    },
+    {
+      "name": "object_tasks_object_minus_geo",
+      "left": "object",
+      "right": "geo",
+      "n": 16,
+      "left_solved": 16,
+      "right_solved": 0,
+      "diff_pp": 100.0,
+      "ci_low_pp": 100.0,
+      "ci_high_pp": 100.0,
+      "clears": true,
+      "left_only": 16,
+      "right_only": 0
+    },
+    {
+      "name": "object_tasks_object_minus_colour",
+      "left": "object",
+      "right": "colour",
+      "n": 16,
+      "left_solved": 16,
+      "right_solved": 5,
+      "diff_pp": 68.75,
+      "ci_low_pp": 43.75,
+      "ci_high_pp": 87.5,
+      "clears": true,
+      "left_only": 11,
+      "right_only": 0
+    },
+    {
+      "name": "society_minus_best_single",
+      "left": "society",
+      "right": "best_single",
+      "best_name": "mixed",
+      "n": 64,
+      "left_solved": 61,
+      "right_solved": 60,
+      "diff_pp": 1.5625,
+      "ci_low_pp": 0.0,
+      "ci_high_pp": 4.6875,
+      "clears": false
+    },
+    {
+      "name": "society_minus_generalist",
+      "left": "society",
+      "right": "generalist",
+      "n": 64,
+      "left_solved": 61,
+      "right_solved": 64,
+      "diff_pp": -4.6875,
+      "ci_low_pp": -10.9375,
+      "ci_high_pp": 0.0,
+      "clears": false,
+      "left_only": 0,
+      "right_only": 3
+    }
+  ],
+  "vectors": {
+    "geo": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "colour": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "object": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "mixed": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    "noisy": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "society": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    "generalist": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "examples": [
+    {
+      "id": "geo-00",
+      "family": "geo",
+      "program": [
+        "transpose"
+      ],
+      "demos": [
+        {
+          "in": "1220;1111;1111",
+          "out": "111;211;211;011"
+        },
+        {
+          "in": "0032;0010;3030",
+          "out": "003;000;313;200"
+        }
+      ],
+      "test_input": "01004;21041;42014;24102",
+      "test_output": "0242;1124;0001;0410;4142",
+      "predictions": {
+        "geo": "0242;1124;0001;0410;4142",
+        "colour": "0242;1124;0001;0410;4142",
+        "object": null,
+        "mixed": "0242;1124;0001;0410;4142",
+        "noisy": "0242;1124;0001;0410;4142"
+      }
+    },
+    {
+      "id": "colour-00",
+      "family": "colour",
+      "program": [
+        "swap_top2"
+      ],
+      "demos": [
+        {
+          "in": "02102;22002;12010",
+          "out": "01201;11001;21020"
+        },
+        {
+          "in": "3032;2333;0301;0301",
+          "out": "1012;2111;0103;0103"
+        }
+      ],
+      "test_input": "022;120;122",
+      "test_output": "011;210;211",
+      "predictions": {
+        "geo": null,
+        "colour": "011;210;211",
+        "object": null,
+        "mixed": "011;210;211",
+        "noisy": "011;210;211"
+      }
+    },
+    {
+      "id": "object-00",
+      "family": "object",
+      "program": [
+        "gravity_right"
+      ],
+      "demos": [
+        {
+          "in": "20100;02110;02210",
+          "out": "00021;00211;00221"
+        },
+        {
+          "in": "240;410;050;300;000",
+          "out": "024;041;005;003;000"
+        }
+      ],
+      "test_input": "300;000;310",
+      "test_output": "003;000;031",
+      "predictions": {
+        "geo": null,
+        "colour": "003;000;031",
+        "object": "003;000;031",
+        "mixed": "003;000;031",
+        "noisy": "003;000;031"
+      }
+    },
+    {
+      "id": "cross-00",
+      "family": "cross",
+      "program": [
+        "fg_to_one",
+        "paint_largest"
+      ],
+      "demos": [
+        {
+          "in": "003;111;005;521",
+          "out": "001;111;001;111"
+        },
+        {
+          "in": "111;112;220",
+          "out": "111;111;110"
+        }
+      ],
+      "test_input": "25340;00430;01110;32450;04414",
+      "test_output": "11110;00110;01110;11110;01111",
+      "predictions": {
+        "geo": null,
+        "colour": "11110;00110;01110;11110;01111",
+        "object": null,
+        "mixed": "11110;00110;01110;11110;01111",
+        "noisy": "11110;00110;01110;11110;01111"
+      }
+    }
+  ],
+  "market": {
+    "solved": 23,
+    "n": 24,
+    "reputation": {
+      "geo": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1020,
+        1020,
+        1020,
+        1040,
+        1040,
+        1040,
+        1040,
+        1060,
+        1060,
+        1060,
+        1060,
+        1060,
+        1147,
+        1147,
+        1147,
+        1167
+      ],
+      "colour": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "object": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "mixed": [
+        1000,
+        1086,
+        1173,
+        1260,
+        1260,
+        1344,
+        1428,
+        1515,
+        1602,
+        1689,
+        1773,
+        1859,
+        1945,
+        2032,
+        2119,
+        2204,
+        2290,
+        2377,
+        2460,
+        2547,
+        2632,
+        2632,
+        2719,
+        2806,
+        2893
+      ],
+      "noisy": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ]
+    },
+    "wins": {
+      "geo": 1,
+      "colour": 0,
+      "object": 0,
+      "mixed": 22,
+      "noisy": 0
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "round": 1,
+        "family": "geo",
+        "program": [
+          "flip_h"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "4105;0555;0445",
+        "answer": "5014;5550;5440",
+        "demos": [
+          {
+            "in": "00311;02220;11110;03122;02311",
+            "out": "11300;02220;01111;22130;11320"
+          },
+          {
+            "in": "450;022;004",
+            "out": "054;220;400"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "geo",
+            "account": "geo.swarm.test",
+            "price": 772700,
+            "confidence_bps": 9454,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "flip_h"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 766500,
+            "confidence_bps": 9330,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "flip_h"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 712500,
+            "confidence_bps": 8251,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "flip_h"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 766500,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 766500,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 233500,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 2,
+        "round": 2,
+        "family": "colour",
+        "program": [
+          "invert_fg"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "00000;01013;21002;12210",
+        "answer": "00000;09097;89008;98890",
+        "demos": [
+          {
+            "in": "0030;1023;0020;2100",
+            "out": "0070;9087;0080;8900"
+          },
+          {
+            "in": "0152;5112;3000;5000",
+            "out": "0958;5998;7000;5000"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "colour",
+            "account": "colour.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "invert_fg"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 783900,
+            "confidence_bps": 9481,
+            "reputation": 1086,
+            "score": 13,
+            "kind": "learner",
+            "program": [
+              "invert_fg"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 760700,
+            "confidence_bps": 9214,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "invert_fg"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 783900,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 783900,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 216100,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 3,
+        "round": 3,
+        "family": "object",
+        "program": [
+          "gravity_down"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "0111;1212;3203;3300;0000",
+        "answer": "0000;0100;1201;3212;3313",
+        "demos": [
+          {
+            "in": "20402;41014;00000",
+            "out": "00000;20002;41414"
+          },
+          {
+            "in": "2102;0021;0212;0000",
+            "out": "0000;0002;0121;2212"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "object",
+            "account": "object.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "gravity_down"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 794000,
+            "confidence_bps": 9481,
+            "reputation": 1173,
+            "score": 14,
+            "kind": "learner",
+            "program": [
+              "gravity_down"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 716000,
+            "confidence_bps": 8321,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "gravity_down"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 794000,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 794000,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 206000,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 4,
+        "round": 4,
+        "family": "cross",
+        "program": [
+          "rot180",
+          "swap_top2"
+        ],
+        "status": "open",
+        "winner": null,
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "1222;2221;0002",
+        "answer": "1000;2111;1112",
+        "demos": [
+          {
+            "in": "021;200;020;001;112",
+            "out": "122;200;010;001;210"
+          },
+          {
+            "in": "013;334;040",
+            "out": "030;344;410"
+          }
+        ],
+        "bids": [],
+        "attempts": [],
+        "payout": {
+          "solver": 0,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 0,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 5,
+        "round": 5,
+        "family": "trap",
+        "program": [
+          "paint_largest"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "222000;222000;222000;000000;000022;000000",
+        "answer": "111000;111000;111000;000000;000022;000000",
+        "demos": [
+          {
+            "in": "022200;022200;022200;000000;000030;000030",
+            "out": "011100;011100;011100;000000;000030;000030"
+          },
+          {
+            "in": "000000;022200;022200;022200;000030;000030",
+            "out": "000000;011100;011100;011100;000030;000030"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "object",
+            "account": "object.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 772600,
+            "confidence_bps": 8873,
+            "reputation": 1260,
+            "score": 14,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 695200,
+            "confidence_bps": 7905,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 772600,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 772600,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 227400,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 6,
+        "round": 6,
+        "family": "geo",
+        "program": [
+          "transpose"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "2334;2340;4022",
+        "answer": "224;330;342;402",
+        "demos": [
+          {
+            "in": "2113;0020;5434;3023",
+            "out": "2053;1040;1232;3043"
+          },
+          {
+            "in": "3221;0230;2301",
+            "out": "302;223;230;101"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "geo",
+            "account": "geo.swarm.test",
+            "price": 770700,
+            "confidence_bps": 9415,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "transpose"
+            ]
+          },
+          {
+            "bidder": "colour",
+            "account": "colour.swarm.test",
+            "price": 400900,
+            "confidence_bps": 2019,
+            "reputation": 1000,
+            "score": 5,
+            "kind": "learner",
+            "program": [
+              "transpose"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 780400,
+            "confidence_bps": 8844,
+            "reputation": 1344,
+            "score": 15,
+            "kind": "learner",
+            "program": [
+              "transpose"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 696700,
+            "confidence_bps": 7935,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "rot90",
+              "flip_h"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 780400,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 780400,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 219600,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 7,
+        "round": 7,
+        "family": "colour",
+        "program": [
+          "cycle_fg"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "244;134;013;014",
+        "answer": "355;245;024;025",
+        "demos": [
+          {
+            "in": "0324;3224;0042;2033;1430",
+            "out": "0435;4335;0053;3044;2540"
+          },
+          {
+            "in": "102;210;121;212",
+            "out": "203;320;232;323"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "colour",
+            "account": "colour.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "cycle_fg"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 823600,
+            "confidence_bps": 9481,
+            "reputation": 1428,
+            "score": 16,
+            "kind": "learner",
+            "program": [
+              "cycle_fg"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 723100,
+            "confidence_bps": 8463,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "cycle_fg"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 823600,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 823600,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 176400,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 8,
+        "round": 8,
+        "family": "object",
+        "program": [
+          "gravity_right"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "42420;10130;00000;40330",
+        "answer": "04242;00113;00000;00433",
+        "demos": [
+          {
+            "in": "0010;2140;2010;3220;4140",
+            "out": "0001;0214;0021;0322;0414"
+          },
+          {
+            "in": "12310;00330;33110;00130",
+            "out": "01231;00033;03311;00013"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "colour",
+            "account": "colour.swarm.test",
+            "price": 400900,
+            "confidence_bps": 2019,
+            "reputation": 1000,
+            "score": 5,
+            "kind": "learner",
+            "program": [
+              "gravity_right"
+            ]
+          },
+          {
+            "bidder": "object",
+            "account": "object.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "gravity_right"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 833700,
+            "confidence_bps": 9481,
+            "reputation": 1515,
+            "score": 17,
+            "kind": "learner",
+            "program": [
+              "gravity_right"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 655500,
+            "confidence_bps": 7110,
+            "reputation": 1000,
+            "score": 10,
+            "kind": "learner",
+            "program": [
+              "gravity_right"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 833700,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 833700,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 166300,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 9,
+        "round": 9,
+        "family": "cross",
+        "program": [
+          "rot90",
+          "fg_to_one"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "10002;12012;01112;02122",
+        "answer": "0011;1110;1100;1110;1111",
+        "demos": [
+          {
+            "in": "3013;5501;2034",
+            "out": "111;010;101;111"
+          },
+          {
+            "in": "1012;1000;0120",
+            "out": "011;100;101;001"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "colour",
+            "account": "colour.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "fg_to_one",
+              "rot90"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 843800,
+            "confidence_bps": 9480,
+            "reputation": 1602,
+            "score": 17,
+            "kind": "learner",
+            "program": [
+              "fg_to_one",
+              "rot90"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 725700,
+            "confidence_bps": 8514,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "fg_to_one",
+              "rot90"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 675040,
+            "helper_paid": 168760,
+            "helper": "geo"
+          }
+        ],
+        "payout": {
+          "solver": 675040,
+          "helper": 168760,
+          "helper_account": "geo.swarm.test",
+          "requester_refund": 156200,
+          "slashed": 0,
+          "share_bps": 2000
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 10,
+        "round": 10,
+        "family": "trap",
+        "program": [
+          "paint_largest"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "222000;222000;222000;000000;000222;000200",
+        "answer": "111000;111000;111000;000000;000222;000200",
+        "demos": [
+          {
+            "in": "022200;022200;022200;000000;000030;000030",
+            "out": "011100;011100;011100;000000;000030;000030"
+          },
+          {
+            "in": "000000;222000;222000;222000;000030;000030",
+            "out": "000000;111000;111000;111000;000030;000030"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "object",
+            "account": "object.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 820400,
+            "confidence_bps": 8873,
+            "reputation": 1689,
+            "score": 18,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 695200,
+            "confidence_bps": 7905,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 820400,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 820400,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 179600,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 11,
+        "round": 11,
+        "family": "geo",
+        "program": [
+          "rot270"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "1322;0031;2122",
+        "answer": "212;232;301;102",
+        "demos": [
+          {
+            "in": "2452;2443;2030;0050",
+            "out": "2300;5435;4400;2220"
+          },
+          {
+            "in": "33101;02230;33120",
+            "out": "100;032;121;323;303"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "geo",
+            "account": "geo.swarm.test",
+            "price": 773300,
+            "confidence_bps": 9421,
+            "reputation": 1020,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "rot270"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 848400,
+            "confidence_bps": 9207,
+            "reputation": 1773,
+            "score": 19,
+            "kind": "learner",
+            "program": [
+              "rot270"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 848400,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 848400,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 151600,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 12,
+        "round": 12,
+        "family": "cross",
+        "program": [
+          "flip_h",
+          "cycle_fg"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "5232;3000;3502;4000;3154",
+        "answer": "3436;0004;3064;0005;5624",
+        "demos": [
+          {
+            "in": "31000;20102;32210;03322;00111",
+            "out": "00024;30203;02334;33440;22200"
+          },
+          {
+            "in": "32030;00323;30011",
+            "out": "04034;43400;22004"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 864200,
+            "confidence_bps": 9313,
+            "reputation": 1859,
+            "score": 20,
+            "kind": "learner",
+            "program": [
+              "cycle_fg",
+              "flip_h"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 704600,
+            "confidence_bps": 8093,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "cycle_fg",
+              "flip_h"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 691360,
+            "helper_paid": 172840,
+            "helper": "geo"
+          }
+        ],
+        "payout": {
+          "solver": 691360,
+          "helper": 172840,
+          "helper_account": "geo.swarm.test",
+          "requester_refund": 135800,
+          "slashed": 0,
+          "share_bps": 2000
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 13,
+        "round": 13,
+        "family": "colour",
+        "program": [
+          "fg_to_one"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "1302;2313;0403;0010;0040",
+        "answer": "1101;1111;0101;0010;0010",
+        "demos": [
+          {
+            "in": "0550;0000;4432",
+            "out": "0110;0000;1111"
+          },
+          {
+            "in": "0300;1101;1200",
+            "out": "0100;1101;1100"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "colour",
+            "account": "colour.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "fg_to_one"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 883700,
+            "confidence_bps": 9481,
+            "reputation": 1945,
+            "score": 20,
+            "kind": "learner",
+            "program": [
+              "fg_to_one"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 738800,
+            "confidence_bps": 8776,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "fg_to_one"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 883700,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 883700,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 116300,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 14,
+        "round": 14,
+        "family": "object",
+        "program": [
+          "gravity_down"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "111;110;000",
+        "answer": "000;110;111",
+        "demos": [
+          {
+            "in": "33201;03132;02123;00000",
+            "out": "00000;03201;03132;32123"
+          },
+          {
+            "in": "1033;3221;3033;2030;0000",
+            "out": "0000;1030;3023;3031;2233"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "object",
+            "account": "object.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "gravity_down"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 893800,
+            "confidence_bps": 9481,
+            "reputation": 2032,
+            "score": 21,
+            "kind": "learner",
+            "program": [
+              "gravity_down"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 701000,
+            "confidence_bps": 8020,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "gravity_down"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 893800,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 893800,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 106200,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 15,
+        "round": 15,
+        "family": "trap",
+        "program": [
+          "paint_largest"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "222000;222000;222000;000000;000022;000000",
+        "answer": "111000;111000;111000;000000;000022;000000",
+        "demos": [
+          {
+            "in": "000000;022200;022200;022200;000030;000030",
+            "out": "000000;011100;011100;011100;000030;000030"
+          },
+          {
+            "in": "000000;222000;222000;222000;000030;000030",
+            "out": "000000;111000;111000;111000;000030;000030"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "object",
+            "account": "object.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 878500,
+            "confidence_bps": 9047,
+            "reputation": 2119,
+            "score": 21,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 693600,
+            "confidence_bps": 7872,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 878500,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 878500,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 121500,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 16,
+        "round": 16,
+        "family": "cross",
+        "program": [
+          "flip_v",
+          "fg_to_one"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "0402;0532;1220",
+        "answer": "1110;0111;0101",
+        "demos": [
+          {
+            "in": "211;022;111",
+            "out": "111;011;111"
+          },
+          {
+            "in": "010;311;013",
+            "out": "011;111;010"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 907900,
+            "confidence_bps": 9383,
+            "reputation": 2204,
+            "score": 22,
+            "kind": "learner",
+            "program": [
+              "fg_to_one",
+              "flip_v"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 731200,
+            "confidence_bps": 8625,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "fg_to_one",
+              "flip_v"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 726320,
+            "helper_paid": 181580,
+            "helper": "geo"
+          }
+        ],
+        "payout": {
+          "solver": 726320,
+          "helper": 181580,
+          "helper_account": "geo.swarm.test",
+          "requester_refund": 92100,
+          "slashed": 0,
+          "share_bps": 2000
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 17,
+        "round": 17,
+        "family": "geo",
+        "program": [
+          "rot180"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "121;230;240",
+        "answer": "042;032;121",
+        "demos": [
+          {
+            "in": "050;003;022;401;214",
+            "out": "412;104;220;300;050"
+          },
+          {
+            "in": "2000;0120;2002;2200",
+            "out": "0022;2002;0210;0002"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "geo",
+            "account": "geo.swarm.test",
+            "price": 780200,
+            "confidence_bps": 9467,
+            "reputation": 1060,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "rot180"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 920000,
+            "confidence_bps": 9433,
+            "reputation": 2290,
+            "score": 23,
+            "kind": "learner",
+            "program": [
+              "rot180"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 706800,
+            "confidence_bps": 8137,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "flip_h",
+              "flip_v"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 920000,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 920000,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 80000,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 18,
+        "round": 18,
+        "family": "trap",
+        "program": [
+          "paint_largest"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "222000;222000;222000;000000;000022;000000",
+        "answer": "111000;111000;111000;000000;000022;000000",
+        "demos": [
+          {
+            "in": "222000;222000;222000;000000;000030;000030",
+            "out": "111000;111000;111000;000000;000030;000030"
+          },
+          {
+            "in": "000000;022200;022200;022200;000030;000030",
+            "out": "000000;011100;011100;011100;000030;000030"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "object",
+            "account": "object.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 891800,
+            "confidence_bps": 8785,
+            "reputation": 2377,
+            "score": 23,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 696700,
+            "confidence_bps": 7934,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 891800,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 891800,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 108200,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 19,
+        "round": 19,
+        "family": "colour",
+        "program": [
+          "invert_fg"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "3231;0213;1000",
+        "answer": "7879;0897;9000",
+        "demos": [
+          {
+            "in": "0011;0012;2220;2121;2210",
+            "out": "0099;0098;8880;8989;8890"
+          },
+          {
+            "in": "112;221;030;322;131",
+            "out": "998;889;070;788;979"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "colour",
+            "account": "colour.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "invert_fg"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 920000,
+            "confidence_bps": 9481,
+            "reputation": 2460,
+            "score": 25,
+            "kind": "learner",
+            "program": [
+              "invert_fg"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 771700,
+            "confidence_bps": 9435,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "invert_fg"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 920000,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 920000,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 80000,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 20,
+        "round": 20,
+        "family": "trap",
+        "program": [
+          "paint_largest"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "222000;222000;222000;000000;000022;000000",
+        "answer": "111000;111000;111000;000000;000022;000000",
+        "demos": [
+          {
+            "in": "000000;022200;022200;022200;000030;000030",
+            "out": "000000;011100;011100;011100;000030;000030"
+          },
+          {
+            "in": "022200;022200;022200;000000;000030;000030",
+            "out": "011100;011100;011100;000000;000030;000030"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "object",
+            "account": "object.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 920000,
+            "confidence_bps": 9047,
+            "reputation": 2547,
+            "score": 25,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 693600,
+            "confidence_bps": 7872,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "paint_largest"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 920000,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 920000,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 80000,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 21,
+        "round": 21,
+        "family": "geo",
+        "program": [
+          "rot90"
+        ],
+        "status": "solved",
+        "winner": "geo",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "001;211;111",
+        "answer": "120;110;111",
+        "demos": [
+          {
+            "in": "120;210;000",
+            "out": "021;012;000"
+          },
+          {
+            "in": "30112;23030;25032;02502",
+            "out": "0223;2530;5001;0331;2202"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "geo",
+            "account": "geo.swarm.test",
+            "price": 777500,
+            "confidence_bps": 9413,
+            "reputation": 1060,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "rot90"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "geo",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 777500,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 777500,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 222500,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 22,
+        "round": 22,
+        "family": "colour",
+        "program": [
+          "invert_fg"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "3022;4142;1413;0144;2000",
+        "answer": "7088;6968;9697;0966;8000",
+        "demos": [
+          {
+            "in": "40420;30001;00201;01003;40412",
+            "out": "60680;70009;00809;09007;60698"
+          },
+          {
+            "in": "3342;3034;1432;1232;0340",
+            "out": "7768;7076;9678;9878;0760"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "colour",
+            "account": "colour.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "invert_fg"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 920000,
+            "confidence_bps": 9481,
+            "reputation": 2632,
+            "score": 27,
+            "kind": "learner",
+            "program": [
+              "invert_fg"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 763300,
+            "confidence_bps": 9267,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "invert_fg"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 920000,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 920000,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 80000,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 23,
+        "round": 23,
+        "family": "object",
+        "program": [
+          "keep_largest"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "2010;1320;1103;0133;1211",
+        "answer": "0000;1000;1100;0100;0000",
+        "demos": [
+          {
+            "in": "225;021;450;500",
+            "out": "220;020;000;000"
+          },
+          {
+            "in": "020;000;100;121;000",
+            "out": "000;000;100;100;000"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "object",
+            "account": "object.swarm.test",
+            "price": 774000,
+            "confidence_bps": 9481,
+            "reputation": 1000,
+            "score": 12,
+            "kind": "learner",
+            "program": [
+              "keep_largest"
+            ]
+          },
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 920000,
+            "confidence_bps": 9481,
+            "reputation": 2719,
+            "score": 28,
+            "kind": "learner",
+            "program": [
+              "keep_largest"
+            ]
+          },
+          {
+            "bidder": "noisy",
+            "account": "noisy.swarm.test",
+            "price": 702300,
+            "confidence_bps": 8046,
+            "reputation": 1000,
+            "score": 11,
+            "kind": "learner",
+            "program": [
+              "keep_largest"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 920000,
+            "helper_paid": 0,
+            "helper": null
+          }
+        ],
+        "payout": {
+          "solver": 920000,
+          "helper": 0,
+          "helper_account": null,
+          "requester_refund": 80000,
+          "slashed": 0,
+          "share_bps": 0
+        },
+        "explorer_url": null
+      },
+      {
+        "id": 24,
+        "round": 24,
+        "family": "cross",
+        "program": [
+          "transpose",
+          "invert_fg"
+        ],
+        "status": "solved",
+        "winner": "mixed",
+        "bounty": 1000000,
+        "stake": 100000,
+        "test_input": "3104;4033;4411",
+        "answer": "766;906;079;679",
+        "demos": [
+          {
+            "in": "43120;04032;03023;01400;04000",
+            "out": "60000;76796;90060;87800;08700"
+          },
+          {
+            "in": "050;341;205;552",
+            "out": "0785;5605;0958"
+          }
+        ],
+        "bids": [
+          {
+            "bidder": "mixed",
+            "account": "mixed.swarm.test",
+            "price": 920000,
+            "confidence_bps": 9477,
+            "reputation": 2806,
+            "score": 28,
+            "kind": "learner",
+            "program": [
+              "invert_fg",
+              "transpose"
+            ]
+          }
+        ],
+        "attempts": [
+          {
+            "assignee": "mixed",
+            "correct": true,
+            "reason": "solved",
+            "slashed": 0,
+            "solver_paid": 736000,
+            "helper_paid": 184000,
+            "helper": "geo"
+          }
+        ],
+        "payout": {
+          "solver": 736000,
+          "helper": 184000,
+          "helper_account": "geo.swarm.test",
+          "requester_refund": 80000,
+          "slashed": 0,
+          "share_bps": 2000
+        },
+        "explorer_url": null
+      }
+    ]
+  }
+}

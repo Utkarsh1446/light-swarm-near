@@ -1,0 +1,34 @@
+# Secrets and local credentials. Never commit these.
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+neardev/
+.near-credentials/
+.near/
+**/credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Rust
+contract/target/
+target/
+
+# Generated run output (official demo artifacts under docs/media and
+# dashboard/data.js are committed on purpose)
+out/
+*.log
+
+# OS / editor
+node_modules/
+test-results/
+playwright-report/
+.DS_Store
+.idea/
+.vscode/

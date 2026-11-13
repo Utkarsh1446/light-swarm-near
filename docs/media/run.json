@@ -1,0 +1,1544 @@
+{
+  "project": "Light Agents Swarm Market",
+  "seed": 1,
+  "rounds": 20,
+  "mode": "offline",
+  "quick": false,
+  "prior": {
+    "params": 326800,
+    "epochs": 6,
+    "samples": 1600,
+    "width": 384,
+    "train_seconds": 3.909,
+    "top1_accuracy": 0.925,
+    "top6_recall": 0.95,
+    "depth2_top6_recall": 0.8857,
+    "chance_top1": 0.0625,
+    "ops": 16
+  },
+  "agents": [
+    {
+      "id": "geo",
+      "account": "geo.swarm.test",
+      "upbringing": "Exhaustive catalogue over rot90, rot180, rot270, flip_h, flip_v, transpose. No curiosity bonus.",
+      "curiosity": 0.0,
+      "solves": 4,
+      "fails": 0,
+      "earned": 1657060,
+      "slashed": 0,
+      "final_reputation": 1388,
+      "reputation": [
+        1000,
+        1087,
+        1087,
+        1087,
+        1087,
+        1087,
+        1174,
+        1174,
+        1174,
+        1174,
+        1174,
+        1261,
+        1281,
+        1281,
+        1281,
+        1281,
+        1301,
+        1388,
+        1388,
+        1388,
+        1388
+      ],
+      "mean_bid_price_frac": 0.347125,
+      "archive_size": 0
+    },
+    {
+      "id": "colour",
+      "account": "colour.swarm.test",
+      "upbringing": "Exhaustive catalogue over cycle_fg, fg_to_one, invert_fg, swap_top2. No curiosity bonus.",
+      "curiosity": 0.0,
+      "solves": 4,
+      "fails": 0,
+      "earned": 1386500,
+      "slashed": 0,
+      "final_reputation": 1348,
+      "reputation": [
+        1000,
+        1000,
+        1087,
+        1087,
+        1087,
+        1087,
+        1087,
+        1174,
+        1174,
+        1174,
+        1174,
+        1174,
+        1174,
+        1261,
+        1261,
+        1261,
+        1261,
+        1261,
+        1261,
+        1348,
+        1348
+      ],
+      "mean_bid_price_frac": 0.346625,
+      "archive_size": 0
+    },
+    {
+      "id": "object",
+      "account": "object.swarm.test",
+      "upbringing": "Exhaustive catalogue over crop_bbox, keep_largest, paint_largest, gravity_down, gravity_right, tile2. No curiosity bonus.",
+      "curiosity": 0.0,
+      "solves": 8,
+      "fails": 0,
+      "earned": 4322900,
+      "slashed": 0,
+      "final_reputation": 1708,
+      "reputation": [
+        1000,
+        1000,
+        1000,
+        1086,
+        1106,
+        1192,
+        1192,
+        1192,
+        1278,
+        1278,
+        1364,
+        1364,
+        1364,
+        1364,
+        1450,
+        1536,
+        1536,
+        1536,
+        1622,
+        1622,
+        1708
+      ],
+      "mean_bid_price_frac": 0.5238625,
+      "archive_size": 0
+    },
+    {
+      "id": "curious",
+      "account": "curious.swarm.test",
+      "upbringing": "All 16 ops, beam 6, budget 48, novelty bonus 1.5 on unseen behaviors, MLP prior, subcontracts the second op's specialist at 20%.",
+      "curiosity": 1.5,
+      "solves": 3,
+      "fails": 0,
+      "earned": 1602240,
+      "slashed": 0,
+      "final_reputation": 1231,
+      "reputation": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1077,
+        1077,
+        1077,
+        1077,
+        1077,
+        1077,
+        1077,
+        1077,
+        1154,
+        1154,
+        1154,
+        1154,
+        1231,
+        1231,
+        1231,
+        1231,
+        1231
+      ],
+      "mean_bid_price_frac": 0.6708,
+      "archive_size": 116
+    },
+    {
+      "id": "mapfit",
+      "account": "mapfit.swarm.test",
+      "upbringing": "Global colour-map heuristic. No program search. Abstains unless one aligned map explains every demo.",
+      "curiosity": 0.0,
+      "solves": 0,
+      "fails": 2,
+      "earned": 0,
+      "slashed": 200000,
+      "final_reputation": 880,
+      "reputation": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        940,
+        940,
+        940,
+        940,
+        940,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880
+      ],
+      "mean_bid_price_frac": 0.36,
+      "archive_size": 0
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "round": 1,
+      "family": "geo",
+      "program": [
+        "flip_h"
+      ],
+      "status": "solved",
+      "winner": "geo",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "0421;1220;2020;0440",
+      "answer": "1240;0221;0202;0440",
+      "bids": [
+        {
+          "bidder": "geo",
+          "account": "geo.swarm.test",
+          "price": 340000,
+          "confidence_bps": 9500,
+          "reputation": 1000,
+          "score": 27,
+          "kind": "catalogue",
+          "program": [
+            "flip_h"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 660000,
+          "confidence_bps": 7400,
+          "reputation": 1000,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "flip_h"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "geo",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 340000,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 340000,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 660000,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 2,
+      "round": 2,
+      "family": "colour",
+      "program": [
+        "fg_to_one"
+      ],
+      "status": "solved",
+      "winner": "colour",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "23123;30001;33011;03003",
+      "answer": "11111;10001;11011;01001",
+      "bids": [
+        {
+          "bidder": "colour",
+          "account": "colour.swarm.test",
+          "price": 340000,
+          "confidence_bps": 9500,
+          "reputation": 1000,
+          "score": 27,
+          "kind": "catalogue",
+          "program": [
+            "fg_to_one"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 660000,
+          "confidence_bps": 7400,
+          "reputation": 1000,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "fg_to_one"
+          ]
+        },
+        {
+          "bidder": "mapfit",
+          "account": "mapfit.swarm.test",
+          "price": 360000,
+          "confidence_bps": 9100,
+          "reputation": 1000,
+          "score": 25,
+          "kind": "mapfit",
+          "program": null
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "colour",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 340000,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 340000,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 660000,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 3,
+      "round": 3,
+      "family": "object",
+      "program": [
+        "tile2"
+      ],
+      "status": "solved",
+      "winner": "object",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "200;210;101",
+      "answer": "200200;210210;101101;200200;210210;101101",
+      "bids": [
+        {
+          "bidder": "object",
+          "account": "object.swarm.test",
+          "price": 500000,
+          "confidence_bps": 9300,
+          "reputation": 1000,
+          "score": 18,
+          "kind": "catalogue",
+          "program": [
+            "tile2"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 660000,
+          "confidence_bps": 7400,
+          "reputation": 1000,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "tile2"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "object",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 500000,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 500000,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 500000,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 4,
+      "round": 4,
+      "family": "cross",
+      "program": [
+        "gravity_down",
+        "cycle_fg"
+      ],
+      "status": "solved",
+      "winner": "curious",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "0222;0020;3313;0000",
+      "answer": "0000;0030;0333;4424",
+      "bids": [
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 660000,
+          "confidence_bps": 7400,
+          "reputation": 1000,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "cycle_fg",
+            "gravity_down"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "curious",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 528000,
+          "helper_paid": 132000,
+          "helper": "object"
+        }
+      ],
+      "payout": {
+        "solver": 528000,
+        "helper": 132000,
+        "helper_account": "object.swarm.test",
+        "requester_refund": 340000,
+        "slashed": 0,
+        "share_bps": 2000
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 5,
+      "round": 5,
+      "family": "trap",
+      "program": [
+        "paint_largest"
+      ],
+      "status": "solved",
+      "winner": "object",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "222000;222000;222000;000000;000222;000200",
+      "answer": "111000;111000;111000;000000;000222;000200",
+      "bids": [
+        {
+          "bidder": "object",
+          "account": "object.swarm.test",
+          "price": 507900,
+          "confidence_bps": 9300,
+          "reputation": 1106,
+          "score": 20,
+          "kind": "catalogue",
+          "program": [
+            "paint_largest"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 667600,
+          "confidence_bps": 7400,
+          "reputation": 1077,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "paint_largest"
+          ]
+        },
+        {
+          "bidder": "mapfit",
+          "account": "mapfit.swarm.test",
+          "price": 360000,
+          "confidence_bps": 9100,
+          "reputation": 1000,
+          "score": 25,
+          "kind": "mapfit",
+          "program": null
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "mapfit",
+          "correct": false,
+          "reason": "wrong_answer",
+          "slashed": 100000,
+          "solver_paid": 0,
+          "helper_paid": 0,
+          "helper": null
+        },
+        {
+          "assignee": "object",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 507900,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 507900,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 492100,
+        "slashed": 100000,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 6,
+      "round": 6,
+      "family": "geo",
+      "program": [
+        "flip_h"
+      ],
+      "status": "solved",
+      "winner": "geo",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "34452;10010;00012;00500;11313",
+      "answer": "25443;01001;21000;00500;31311",
+      "bids": [
+        {
+          "bidder": "geo",
+          "account": "geo.swarm.test",
+          "price": 344400,
+          "confidence_bps": 9500,
+          "reputation": 1087,
+          "score": 29,
+          "kind": "catalogue",
+          "program": [
+            "flip_h"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 667600,
+          "confidence_bps": 7400,
+          "reputation": 1077,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "flip_h"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "geo",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 344400,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 344400,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 655600,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 7,
+      "round": 7,
+      "family": "colour",
+      "program": [
+        "swap_top2"
+      ],
+      "status": "solved",
+      "winner": "colour",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "200;111;122",
+      "answer": "100;222;211",
+      "bids": [
+        {
+          "bidder": "colour",
+          "account": "colour.swarm.test",
+          "price": 344400,
+          "confidence_bps": 9500,
+          "reputation": 1087,
+          "score": 29,
+          "kind": "catalogue",
+          "program": [
+            "swap_top2"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 667600,
+          "confidence_bps": 7400,
+          "reputation": 1077,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "swap_top2"
+          ]
+        },
+        {
+          "bidder": "mapfit",
+          "account": "mapfit.swarm.test",
+          "price": 360000,
+          "confidence_bps": 9100,
+          "reputation": 940,
+          "score": 23,
+          "kind": "mapfit",
+          "program": null
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "colour",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 344400,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 344400,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 655600,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 8,
+      "round": 8,
+      "family": "object",
+      "program": [
+        "crop_bbox"
+      ],
+      "status": "solved",
+      "winner": "object",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "00000;02000;05350;05140;00000",
+      "answer": "200;535;514",
+      "bids": [
+        {
+          "bidder": "object",
+          "account": "object.swarm.test",
+          "price": 514400,
+          "confidence_bps": 9300,
+          "reputation": 1192,
+          "score": 21,
+          "kind": "catalogue",
+          "program": [
+            "crop_bbox"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 667600,
+          "confidence_bps": 7400,
+          "reputation": 1077,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "crop_bbox"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "object",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 514400,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 514400,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 485600,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 9,
+      "round": 9,
+      "family": "cross",
+      "program": [
+        "transpose",
+        "invert_fg"
+      ],
+      "status": "open",
+      "winner": null,
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "2011;0122;0101;2020;1100",
+      "answer": "80089;09909;98080;98900",
+      "bids": [],
+      "attempts": [],
+      "payout": {
+        "solver": 0,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 0,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 10,
+      "round": 10,
+      "family": "trap",
+      "program": [
+        "paint_largest"
+      ],
+      "status": "solved",
+      "winner": "object",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "222000;222000;222000;000000;000022;000000",
+      "answer": "111000;111000;111000;000000;000022;000000",
+      "bids": [
+        {
+          "bidder": "object",
+          "account": "object.swarm.test",
+          "price": 520800,
+          "confidence_bps": 9300,
+          "reputation": 1278,
+          "score": 22,
+          "kind": "catalogue",
+          "program": [
+            "paint_largest"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 667600,
+          "confidence_bps": 7400,
+          "reputation": 1077,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "paint_largest"
+          ]
+        },
+        {
+          "bidder": "mapfit",
+          "account": "mapfit.swarm.test",
+          "price": 360000,
+          "confidence_bps": 9100,
+          "reputation": 940,
+          "score": 23,
+          "kind": "mapfit",
+          "program": null
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "mapfit",
+          "correct": false,
+          "reason": "wrong_answer",
+          "slashed": 100000,
+          "solver_paid": 0,
+          "helper_paid": 0,
+          "helper": null
+        },
+        {
+          "assignee": "object",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 520800,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 520800,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 479200,
+        "slashed": 100000,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 11,
+      "round": 11,
+      "family": "geo",
+      "program": [
+        "flip_h"
+      ],
+      "status": "solved",
+      "winner": "geo",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "15005;55003;03331;50003;00525",
+      "answer": "50051;30055;13330;30005;52500",
+      "bids": [
+        {
+          "bidder": "geo",
+          "account": "geo.swarm.test",
+          "price": 348800,
+          "confidence_bps": 9500,
+          "reputation": 1174,
+          "score": 31,
+          "kind": "catalogue",
+          "program": [
+            "flip_h"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 667600,
+          "confidence_bps": 7400,
+          "reputation": 1077,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "flip_h"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "geo",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 348800,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 348800,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 651200,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 12,
+      "round": 12,
+      "family": "cross",
+      "program": [
+        "transpose",
+        "invert_fg"
+      ],
+      "status": "solved",
+      "winner": "curious",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "00102;21100;11100",
+      "answer": "089;099;999;000;800",
+      "bids": [
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 667600,
+          "confidence_bps": 7400,
+          "reputation": 1077,
+          "score": 11,
+          "kind": "curious",
+          "program": [
+            "invert_fg",
+            "transpose"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "curious",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 534080,
+          "helper_paid": 133520,
+          "helper": "geo"
+        }
+      ],
+      "payout": {
+        "solver": 534080,
+        "helper": 133520,
+        "helper_account": "geo.swarm.test",
+        "requester_refund": 332400,
+        "slashed": 0,
+        "share_bps": 2000
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 13,
+      "round": 13,
+      "family": "colour",
+      "program": [
+        "cycle_fg"
+      ],
+      "status": "solved",
+      "winner": "colour",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "120;211;210;000",
+      "answer": "230;322;320;000",
+      "bids": [
+        {
+          "bidder": "colour",
+          "account": "colour.swarm.test",
+          "price": 348800,
+          "confidence_bps": 9500,
+          "reputation": 1174,
+          "score": 31,
+          "kind": "catalogue",
+          "program": [
+            "cycle_fg"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 675200,
+          "confidence_bps": 7400,
+          "reputation": 1154,
+          "score": 12,
+          "kind": "curious",
+          "program": [
+            "cycle_fg"
+          ]
+        },
+        {
+          "bidder": "mapfit",
+          "account": "mapfit.swarm.test",
+          "price": 360000,
+          "confidence_bps": 9100,
+          "reputation": 880,
+          "score": 22,
+          "kind": "mapfit",
+          "program": null
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "colour",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 348800,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 348800,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 651200,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 14,
+      "round": 14,
+      "family": "object",
+      "program": [
+        "crop_bbox"
+      ],
+      "status": "solved",
+      "winner": "object",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "03030;02000;02000;00000;00000",
+      "answer": "303;200;200",
+      "bids": [
+        {
+          "bidder": "object",
+          "account": "object.swarm.test",
+          "price": 527300,
+          "confidence_bps": 9300,
+          "reputation": 1364,
+          "score": 24,
+          "kind": "catalogue",
+          "program": [
+            "crop_bbox"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 675200,
+          "confidence_bps": 7400,
+          "reputation": 1154,
+          "score": 12,
+          "kind": "curious",
+          "program": [
+            "crop_bbox"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "object",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 527300,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 527300,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 472700,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 15,
+      "round": 15,
+      "family": "trap",
+      "program": [
+        "paint_largest"
+      ],
+      "status": "solved",
+      "winner": "object",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "222000;222000;222000;000000;000022;000000",
+      "answer": "111000;111000;111000;000000;000022;000000",
+      "bids": [
+        {
+          "bidder": "object",
+          "account": "object.swarm.test",
+          "price": 533700,
+          "confidence_bps": 9300,
+          "reputation": 1450,
+          "score": 25,
+          "kind": "catalogue",
+          "program": [
+            "paint_largest"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 675200,
+          "confidence_bps": 7400,
+          "reputation": 1154,
+          "score": 12,
+          "kind": "curious",
+          "program": [
+            "paint_largest"
+          ]
+        },
+        {
+          "bidder": "mapfit",
+          "account": "mapfit.swarm.test",
+          "price": 360000,
+          "confidence_bps": 9100,
+          "reputation": 880,
+          "score": 22,
+          "kind": "mapfit",
+          "program": null
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "object",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 533700,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 533700,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 466300,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 16,
+      "round": 16,
+      "family": "cross",
+      "program": [
+        "flip_h",
+        "cycle_fg"
+      ],
+      "status": "solved",
+      "winner": "curious",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "424;201;200;451",
+      "answer": "535;203;003;265",
+      "bids": [
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 675200,
+          "confidence_bps": 7400,
+          "reputation": 1154,
+          "score": 12,
+          "kind": "curious",
+          "program": [
+            "cycle_fg",
+            "flip_h"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "curious",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 540160,
+          "helper_paid": 135040,
+          "helper": "geo"
+        }
+      ],
+      "payout": {
+        "solver": 540160,
+        "helper": 135040,
+        "helper_account": "geo.swarm.test",
+        "requester_refund": 324800,
+        "slashed": 0,
+        "share_bps": 2000
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 17,
+      "round": 17,
+      "family": "geo",
+      "program": [
+        "flip_v"
+      ],
+      "status": "solved",
+      "winner": "geo",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "03245;10440;35003",
+      "answer": "35003;10440;03245",
+      "bids": [
+        {
+          "bidder": "geo",
+          "account": "geo.swarm.test",
+          "price": 355300,
+          "confidence_bps": 9500,
+          "reputation": 1301,
+          "score": 34,
+          "kind": "catalogue",
+          "program": [
+            "flip_v"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 682800,
+          "confidence_bps": 7400,
+          "reputation": 1231,
+          "score": 13,
+          "kind": "curious",
+          "program": [
+            "flip_v"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "geo",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 355300,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 355300,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 644700,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 18,
+      "round": 18,
+      "family": "trap",
+      "program": [
+        "paint_largest"
+      ],
+      "status": "solved",
+      "winner": "object",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "222000;222000;222000;000000;000022;000000",
+      "answer": "111000;111000;111000;000000;000022;000000",
+      "bids": [
+        {
+          "bidder": "object",
+          "account": "object.swarm.test",
+          "price": 540200,
+          "confidence_bps": 9300,
+          "reputation": 1536,
+          "score": 26,
+          "kind": "catalogue",
+          "program": [
+            "paint_largest"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 682800,
+          "confidence_bps": 7400,
+          "reputation": 1231,
+          "score": 13,
+          "kind": "curious",
+          "program": [
+            "paint_largest"
+          ]
+        },
+        {
+          "bidder": "mapfit",
+          "account": "mapfit.swarm.test",
+          "price": 360000,
+          "confidence_bps": 9100,
+          "reputation": 880,
+          "score": 22,
+          "kind": "mapfit",
+          "program": null
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "object",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 540200,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 540200,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 459800,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 19,
+      "round": 19,
+      "family": "colour",
+      "program": [
+        "fg_to_one"
+      ],
+      "status": "solved",
+      "winner": "colour",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "121;322;101;100;201",
+      "answer": "111;111;101;100;101",
+      "bids": [
+        {
+          "bidder": "colour",
+          "account": "colour.swarm.test",
+          "price": 353300,
+          "confidence_bps": 9500,
+          "reputation": 1261,
+          "score": 33,
+          "kind": "catalogue",
+          "program": [
+            "fg_to_one"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 682800,
+          "confidence_bps": 7400,
+          "reputation": 1231,
+          "score": 13,
+          "kind": "curious",
+          "program": [
+            "fg_to_one"
+          ]
+        },
+        {
+          "bidder": "mapfit",
+          "account": "mapfit.swarm.test",
+          "price": 360000,
+          "confidence_bps": 9100,
+          "reputation": 880,
+          "score": 22,
+          "kind": "mapfit",
+          "program": null
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "colour",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 353300,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 353300,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 646700,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    },
+    {
+      "id": 20,
+      "round": 20,
+      "family": "trap",
+      "program": [
+        "paint_largest"
+      ],
+      "status": "solved",
+      "winner": "object",
+      "bounty": 1000000,
+      "stake": 100000,
+      "test_input": "222000;222000;222000;000000;000022;000000",
+      "answer": "111000;111000;111000;000000;000022;000000",
+      "bids": [
+        {
+          "bidder": "object",
+          "account": "object.swarm.test",
+          "price": 546600,
+          "confidence_bps": 9300,
+          "reputation": 1622,
+          "score": 27,
+          "kind": "catalogue",
+          "program": [
+            "paint_largest"
+          ]
+        },
+        {
+          "bidder": "curious",
+          "account": "curious.swarm.test",
+          "price": 682800,
+          "confidence_bps": 7400,
+          "reputation": 1231,
+          "score": 13,
+          "kind": "curious",
+          "program": [
+            "paint_largest"
+          ]
+        },
+        {
+          "bidder": "mapfit",
+          "account": "mapfit.swarm.test",
+          "price": 360000,
+          "confidence_bps": 9100,
+          "reputation": 880,
+          "score": 22,
+          "kind": "mapfit",
+          "program": null
+        }
+      ],
+      "attempts": [
+        {
+          "assignee": "object",
+          "correct": true,
+          "reason": "solved",
+          "slashed": 0,
+          "solver_paid": 546600,
+          "helper_paid": 0,
+          "helper": null
+        }
+      ],
+      "payout": {
+        "solver": 546600,
+        "helper": 0,
+        "helper_account": null,
+        "requester_refund": 453400,
+        "slashed": 0,
+        "share_bps": 0
+      },
+      "explorer_url": null
+    }
+  ],
+  "headline": {
+    "posted": 20,
+    "solved": 19,
+    "unsolved": 1,
+    "slashes": 2,
+    "subcontracts": 3,
+    "first_assignment_correct": 17,
+    "winners": {
+      "1": "geo",
+      "2": "colour",
+      "3": "object",
+      "4": "curious",
+      "5": "object",
+      "6": "geo",
+      "7": "colour",
+      "8": "object",
+      "9": null,
+      "10": "object",
+      "11": "geo",
+      "12": "curious",
+      "13": "colour",
+      "14": "object",
+      "15": "object",
+      "16": "curious",
+      "17": "geo",
+      "18": "object",
+      "19": "colour",
+      "20": "object"
+    },
+    "winners_by_family": {
+      "geo": [
+        "geo",
+        "geo",
+        "geo",
+        "geo"
+      ],
+      "colour": [
+        "colour",
+        "colour",
+        "colour",
+        "colour"
+      ],
+      "object": [
+        "object",
+        "object",
+        "object"
+      ],
+      "cross": [
+        "curious",
+        null,
+        "curious",
+        "curious"
+      ],
+      "trap": [
+        "object",
+        "object",
+        "object",
+        "object",
+        "object"
+      ]
+    },
+    "solves_by_agent": {
+      "geo": 4,
+      "colour": 4,
+      "object": 8,
+      "curious": 3,
+      "mapfit": 0
+    },
+    "fails_by_agent": {
+      "geo": 0,
+      "colour": 0,
+      "object": 0,
+      "curious": 0,
+      "mapfit": 2
+    },
+    "final_reputation": {
+      "geo": 1388,
+      "colour": 1348,
+      "object": 1708,
+      "curious": 1231,
+      "mapfit": 880
+    },
+    "earned": {
+      "geo": 1657060,
+      "colour": 1386500,
+      "object": 4322900,
+      "curious": 1602240,
+      "mapfit": 0
+    }
+  },
+  "conservation_ok": true,
+  "contract": {
+    "network": "offline-twin",
+    "account_id": null,
+    "explorer": null,
+    "note": "Python twin of contract/src/lib.rs. See README for the wasm sandbox test and testnet deploy."
+  }
+}

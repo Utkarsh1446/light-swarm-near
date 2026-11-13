@@ -1,0 +1,28 @@
+[package]
+name = "light-swarm-market"
+version = "0.1.0"
+edition = "2021"
+description = "NEAR task market: escrow a bounty, verify a grid hash, split payout, track reputation"
+license = "MIT"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = { version = "=5.5.0", features = ["unit-testing"] }
+
+[dev-dependencies]
+anyhow = "1"
+# 0.22 pulls near-sandbox 2.10, which can prepare wasm from rustc 1.100.
+# 0.13's default sandbox (2.0.0) returns PrepareError(Deserialization).
+near-workspaces = "=0.22.1"
+serde_json = "1"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+overflow-checks = true
