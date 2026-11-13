@@ -610,9 +610,9 @@
     pay.setOption(Object.assign({}, BASE, {
       tooltip: Object.assign({}, tip(), { trigger: "axis" }),
       legend: { top: 0, left: 0, icon: "roundRect", itemWidth: 10, itemHeight: 10, textStyle: { color: palette().mut, fontFamily: "JetBrains Mono", fontSize: 11 }, data: plain() ? [{ name: "winner", itemStyle: { color: "#5b8ef5" } }, "friend"] : [{ name: "solver", itemStyle: { color: "#5b8ef5" } }, "helper"] },
-      grid: { left: 56, right: 10, top: 34, bottom: 24 },
-      xAxis: Object.assign({ type: "category", data: A.map((a) => plain() ? NICE[a.id] : a.id) }, axis(), { splitLine: { show: false } }),
-      yAxis: Object.assign({}, axis(), { type: "value" }),
+      grid: { left: 44, right: 10, top: 34, bottom: 24 },
+      xAxis: Object.assign({ type: "category", data: A.map((a) => plain() ? NICE[a.id] : a.id) }, axis(), { splitLine: { show: false }, axisLabel: Object.assign({}, axis().axisLabel, { interval: 0, fontSize: 10 }) }),
+      yAxis: Object.assign({}, axis(), { type: "value", axisLabel: Object.assign({}, axis().axisLabel, { formatter: (v) => v >= 1e6 ? +(v / 1e6).toFixed(1) + "M" : v >= 1e3 ? +(v / 1e3).toFixed(0) + "k" : v }) }),
       series: [
         { id: "solver", name: plain() ? "winner" : "solver", type: "bar", stack: "p", barWidth: "46%", itemStyle: { color: "#5b8ef5" }, data: [] },
         { id: "helper", name: plain() ? "friend" : "helper", type: "bar", stack: "p", itemStyle: { color: "#c9b89a", borderRadius: [5, 5, 0, 0] }, data: [] },
