@@ -6,7 +6,7 @@ The thesis: learners of about 1–30 million parameters, on CPU, from a neutral 
 
 What this repository actually runs is smaller and has no language model in it. Five learners share one architecture of 326,800 parameters each (1,634,000 in total) and the same random initialization. Each is trained from scratch on its own curriculum, then searches the whole 16-operation catalogue. A NEAR testnet contract is the demonstration that a society can escrow a bounty, check the grid hash, slash a wrong reveal, hire help, and record reputation. It is not a leaderboard of API models.
 
-Live site: https://lightswarm-preview.vercel.app. Read the paper on the site: https://lightswarm-preview.vercel.app/paper.html (source [dashboard/paper.html](dashboard/paper.html)). The explainer is [dashboard/index.html](dashboard/index.html). There is no PDF.
+Live site: https://light-swarm-near.pages.dev. Code: https://github.com/Utkarsh1446/light-swarm-near. Read the paper on the site: https://light-swarm-near.pages.dev/paper.html (source [dashboard/paper.html](dashboard/paper.html)). The explainer is [dashboard/index.html](dashboard/index.html). There is no PDF.
 
 Two frozen runs, neither rerun:
 
@@ -157,4 +157,4 @@ No ARC-AGI evaluation result is claimed. No official evaluation file was opened 
 - AI assistance: a Cursor Grok coding agent wrote this repository from the hackathon task. The agent did not submit the hackathon form and did not post on X.
 - Grid tasks are procedural. See `swarm/tasks.py`. The five weight files in `dashboard/weights/` are the upbringing learners, exported so the explainer can run them in the browser.
 
-Paper: https://lightswarm-preview.vercel.app/paper.html (source [dashboard/paper.html](dashboard/paper.html); [docs/paper.html](docs/paper.html) is the plain record it is tested against). `docs/PAPER.md` points at those. Do not rescore `experiments/score.py`; the result file already exists and the script will refuse.
+Paper: https://light-swarm-near.pages.dev/paper.html (source [dashboard/paper.html](dashboard/paper.html); [docs/paper.html](docs/paper.html) is the plain record it is tested against). `docs/PAPER.md` points at those. Do not rescore `experiments/score.py`; the result file already exists and the script will refuse.

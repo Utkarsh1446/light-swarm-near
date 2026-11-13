@@ -10,8 +10,8 @@ Light agents are the opposite bet, and this one was built at NEAR HACKATHON. Fiv
 
 On protocols frozen before scoring, a learned prior beat an untrained net and a shuffled-label twin. Upbringing specialized the five. A curiosity bonus and the society-versus-best-member contrast did not clear. Those nulls are in the paper. No ARC-AGI score is claimed. Earlier work on this question saw a synthetic generalisation gate pass, a real-task confirmation fail, and a deeper-search gate fail its control.
 
-Paper (read on the site): https://lightswarm-preview.vercel.app/paper.html
-Explainer: https://lightswarm-preview.vercel.app
+Paper (read on the site): https://light-swarm-near.pages.dev/paper.html
+Explainer: https://light-swarm-near.pages.dev
 Code: https://github.com/Utkarsh1446/light-swarm-near
 Contract (testnet): https://testnet.nearblocks.io/address/lightswarm16771.testnet
 
